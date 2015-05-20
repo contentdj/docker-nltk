@@ -20,5 +20,5 @@ This will open a Python shell with access to `nltk` and the brown corpus. To tes
 To install other corpora, pass the `CORPORA` environment variable to the container when running. For example, to work on the `spanish_grammar` and `treebank` corpora:
 
 ```bash
-docker run -e "CORPORA=punkt maxent_treebank_pos_tagger" -it trackmaven/nltk
+docker run -e "CORPORA=punkt maxent_treebank_pos_tagger" -it contentdj/nltk
 ```
