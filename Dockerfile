@@ -1,7 +1,10 @@
-FROM python:2.7.8
-MAINTAINER Jonathan Evans "jon@trackmaven.com"
+FROM trackmaven/nltk
+MAINTAINER Jerry Tian "jerry@contentdj.com"
 
-RUN pip install -U nltk
+RUN pip install -U numpy
 
-ENV CORPORA brown
-CMD python -m nltk.downloader $CORPORA; python
+ENV CORPORA brown punkt maxent_treebank_pos_tagger
+
+RUN python -m nltk.downloader $CORPORA;
+
+CMD python
